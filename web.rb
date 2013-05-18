@@ -13,7 +13,12 @@ require_relative 'helpers.rb' # helper methods
 set :protection, :except => :frame_options
 
 get '/' do
-  "API site"
+  haml :input
+end
+
+post '/' do
+  q = URI.escape params[:query]
+  redirect "/widget/search/#{q}"
 end
 
 # readmill api keys
