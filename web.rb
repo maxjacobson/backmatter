@@ -17,11 +17,10 @@ end
 # readmill api keys
 # ID: cebbc653b49578b9d02a7c23a89dc5e3
 # Secret: 78880e3439585251be67329551092fba
-# https://api.readmill.com/v2/books/match?title=Metamorphosis&author=Franz%20Kafka&client_id=cebbc653b49578b9d02a7c23a89dc5e3
 
 get '/widget/search/:query' do
-  query = params[:query]
-  url = URI.escape "https://api.readmill.com/v2/books/search?query=#{query}&client_id=cebbc653b49578b9d02a7c23a89dc5e3"
+  @query = params[:query]
+  url = URI.escape "https://api.readmill.com/v2/books/search?query=#{@query}&client_id=cebbc653b49578b9d02a7c23a89dc5e3"
   uri = URI.parse url
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true
@@ -30,8 +29,6 @@ get '/widget/search/:query' do
   @books = hash["items"]
   puts @books
   haml :search
-  # puts "there are #{books.length || 0} books that match this query"
-  # haml json, :layout => false
 end
 
 error 404 do

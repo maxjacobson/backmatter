@@ -1,4 +1,4 @@
-%p search results
+%p= "search results for #{@query}"
 %ul
 -@books.each do |book|
   %li= book["book"]["title"]
