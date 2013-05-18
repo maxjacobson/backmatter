@@ -10,6 +10,8 @@ require_relative 'helpers.rb' # helper methods
 # set :dump_errors, false
 # set :show_exceptions, false
 
+set :protection, :except => :frame_options
+
 get '/' do
   "API site"
 end
