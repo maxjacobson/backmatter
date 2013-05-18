@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/widget/author/:author' do
-  haml "api response", :layout => false
+  haml "api response to query: #{params[:author]}", :layout => false
 end
 
 error 404 do
