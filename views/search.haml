@@ -1,4 +1,13 @@
-%p= "search results for #{@query}"
+%h1= "search results for #{@query}"
 %ul
 -@books.each do |book|
-  %li= book["book"]["title"]
+  %li
+    %a.title{:href => book["book"]["permalink_url"]}= "#{book["book"]["title"]}"
+    by
+    %span.author= "#{book["book"]["author"]}"
+
+%form{:action=>"/", :method => "POST"}
+  %label
+    %span new query:
+    %input{:type => "text", :name => "query", :autofocus => "true"}
+    %input{:type => "submit"}
