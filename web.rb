@@ -29,7 +29,7 @@ get '/widget/search/:query' do
   hash = JSON.parse(json)
   @books = hash["items"]
   puts @books
-  haml :search, :layout => false
+  haml :search
   # puts "there are #{books.length || 0} books that match this query"
   # haml json, :layout => false
 end
