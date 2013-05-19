@@ -6,7 +6,8 @@
 }
 
 html {
-  /*width: 3000px;*/
+  width: 3000px;
+  background-color: #F6EFE4;
   font-family: 'Noto Sans', sans-serif;
   padding: 25px;
 }
@@ -14,9 +15,8 @@ body {
   margin: 0 auto;
 }
 .books {
-  width: 100%;
-  overflow: scroll;
-  display: block;
+  overflow: auto;
+  padding-top: 75px;
 }
 .book {
   display: inline;
@@ -28,4 +28,8 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.header, .thanks {
+  position: fixed;
 }
