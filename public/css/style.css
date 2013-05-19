@@ -7,8 +7,8 @@
 
 html {
   width: 3000px;
-  background-color: #F6EFE4;
   font-family: 'Noto Sans', sans-serif;
+  padding: 25px;
 }
 body {
   margin: 0 auto;
