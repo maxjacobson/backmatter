@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
     daemons (1.1.9)
     eventmachine (1.0.3)
     haml (4.0.2)
@@ -27,6 +30,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_support
   haml
   httparty
   sinatra
