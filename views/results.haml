@@ -1,0 +1,7 @@
+%h1= "More #{@query.titleize}"
+
+%div.books
+  -@books.each do |book|
+    %div.book
+      %a.title{:href => book["book"]["permalink_url"]}
+        %img{:src => book["book"]["cover_url"]}
